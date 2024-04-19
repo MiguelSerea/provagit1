@@ -1,20 +1,18 @@
-n = input("Por favor digite seu salário: ")
-total = n
+n = float(input("Por favor, digite seu salário: ")) 
 
-def aumento(n):
-    if(n < 400.01){
-        n = n * (15 / n)
-    }else if(n >= 400.01 && n < 800.01){
-        n = n * (12 / n)
-    }else if(n >= 800.01 && n < 1200.01){
-        n = n * (10 / n)
-    }else if(n >= 1200.01 && n < 2000.01){
-        n = n * (7 / n)
-    }else if(n >= 2000.1){
-        n = n * (4 / n)
-    }
+def aumento(salario):  
+    if salario < 400.01:
+        return salario * (15 / 100)  
+    elif salario >= 400.01 and salario < 800.01:
+        return salario * (12 / 100)  
+    elif salario >= 800.01 and salario < 1200.01:
+        return salario * (10 / 100) 
+    elif salario >= 1200.01 and salario < 2000.01:
+        return salario * (7 / 100)
+    elif salario >= 2000.01:
+        return salario * (4 / 100)  
 
-aumento(n)
-total = total + n
+aumento_salarial = aumento(n)  
+total = n + aumento_salarial 
 
-print("Seu reajuste foi de "+ n " seu salário após o reajuste é de " + total)
+print("Seu reajuste foi de", aumento_salarial, "seu salário após o reajuste é de", total) 
